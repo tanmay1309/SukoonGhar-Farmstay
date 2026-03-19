@@ -9,7 +9,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
 body { background-color: var(--white); color: var(--text-dark); line-height: 1.6; }
 
-/* Header */
+/* Header & Nav */
 header { background: var(--white); padding: 15px 5%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
 nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; }
 .logo { font-size: 26px; font-weight: 700; color: var(--primary-green); letter-spacing: -1px; }
@@ -17,7 +17,7 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .nav-links li a { text-decoration: none; color: var(--text-dark); margin: 0 15px; font-weight: 500; transition: 0.3s; }
 .btn-book { background: var(--primary-green); color: white; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; }
 
-/* Hero Section */
+/* Hero */
 .hero { 
     height: 85vh; 
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('2.jpeg') no-repeat center center/cover; 
@@ -30,7 +30,7 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .btn-white { background: var(--white); color: var(--text-dark); }
 .btn-outline { border: 2px solid var(--white); color: var(--white); }
 
-/* Containers & Shared Subtitles */
+/* Layout & Typography */
 .container { max-width: 1200px; margin: auto; padding: 80px 20px; }
 h2 { font-size: 2.5rem; color: var(--primary-green); text-align: center; margin-bottom: 15px; }
 
@@ -44,7 +44,7 @@ h2 { font-size: 2.5rem; color: var(--primary-green); text-align: center; margin-
     line-height: 1.5;
 }
 
-/* Welcome Section */
+/* Welcome Grid */
 .welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
 .welcome-img img { width: 100%; border-radius: 15px; box-shadow: 20px 20px 0 var(--light-green); }
 .f-item { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; padding: 15px; background: var(--light-green); border-radius: 8px; }
@@ -60,10 +60,17 @@ h2 { font-size: 2.5rem; color: var(--primary-green); text-align: center; margin-
 .gallery-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; transition: 0.3s ease; }
 .gallery-grid img:hover { filter: brightness(90%); transform: scale(1.02); }
 
-/* Contact Cards */
+/* Contact & OTA Buttons */
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
 .contact-card { background: var(--white); border: 1px solid #eee; padding: 40px 20px; border-radius: 15px; text-align: center; text-decoration: none; color: inherit; transition: 0.3s; }
 .contact-card i { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+.contact-card:hover { border-color: var(--primary-green); background: var(--light-green); }
+
+.ota-title { text-align: center; margin-top: 50px; margin-bottom: 25px; color: var(--primary-green); font-size: 1.5rem; font-weight: 600; }
+.ota-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+.ota-link { text-decoration: none; color: var(--primary-green); border: 1.5px solid var(--primary-green); padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
+.ota-link:hover { background: var(--primary-green); color: white; transform: translateY(-3px); box-shadow: 0 6px 15px rgba(74, 93, 69, 0.15); }
+
 .fa-whatsapp { color: #25D366; }
 .fa-instagram { color: #E1306C; }
 .fa-airbnb { color: var(--airbnb-red); }
@@ -85,5 +92,6 @@ footer { background: var(--primary-green); color: white; text-align: center; pad
     .hero-desc, .section-subtitle { font-size: 1.1rem; }
     .welcome-grid { grid-template-columns: 1fr; }
     .welcome-img { order: -1; }
+    .ota-link { font-size: 0.85rem; padding: 10px 20px; }
 }
 @media (max-width: 480px) { .grid-8 { grid-template-columns: 1fr; } }
